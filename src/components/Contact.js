@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaSpinner } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaSpinner, FaWhatsapp } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -17,7 +17,7 @@ const Contact = () => {
   // ✅ APNI REAL IDs YAHAN LAGAO ✅
   const SERVICE_ID = 'service_2es5q7l';        // Service ID
   const TEMPLATE_ID = 'template_seq81o9';      // Template ID
-  const PUBLIC_KEY = '6k7WwjyUOp8QJ5wA8';     // Public Key (yeh format hota hai)
+  const PUBLIC_KEY = '6k7WwjyUOp8QJ5wA8';     // Public Key
 
   const [formData, setFormData] = useState({
     name: '',
@@ -59,6 +59,11 @@ const Contact = () => {
     }
   };
 
+  // WhatsApp number (without + and spaces)
+  const whatsappNumber = '923492209006'; // +92 349 220 9006 -> 923492209006
+  const whatsappLink = `https://wa.me/${whatsappNumber}`;
+  const phoneLink = `tel:+923492209006`;
+
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -89,6 +94,7 @@ const Contact = () => {
             </p>
 
             <div className="space-y-4">
+              {/* Email */}
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
                   <FaEnvelope className="text-pink-500 text-xl" />
@@ -99,16 +105,41 @@ const Contact = () => {
                 </div>
               </div>
 
+              {/* Phone - Call ke liye */}
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
-                  <FaPhone className="text-pink-500 text-xl" />
-                </div>
-                <div>
-                  <p className="text-gray-500 text-sm">Phone</p>
-                  <p className="text-gray-800">+92 349 220 9006</p>
-                </div>
+                <a 
+                  href={phoneLink}
+                  className="flex items-center space-x-4 hover:opacity-80 transition-all"
+                >
+                  <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
+                    <FaPhone className="text-pink-500 text-xl" />
+                  </div>
+                  <div>
+                    <p className="text-gray-500 text-sm">Call Me</p>
+                    <p className="text-gray-800">+92 349 220 9006</p>
+                  </div>
+                </a>
               </div>
 
+              {/* WhatsApp - Chat ke liye */}
+              <div className="flex items-center space-x-4">
+                <a 
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-4 hover:opacity-80 transition-all"
+                >
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                    <FaWhatsapp className="text-green-500 text-xl" />
+                  </div>
+                  <div>
+                    <p className="text-gray-500 text-sm">WhatsApp</p>
+                    <p className="text-gray-800">+92 349 220 9006</p>
+                  </div>
+                </a>
+              </div>
+
+              {/* Location */}
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
                   <FaMapMarkerAlt className="text-pink-500 text-xl" />
