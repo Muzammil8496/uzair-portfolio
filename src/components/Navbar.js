@@ -25,7 +25,7 @@ const Navbar = () => {
             animate={{ opacity: 1 }}
             className="text-3xl font-bold text-gray-800"
           >
-            EMMY<span className="text-pink-500">®</span>
+            UZAIR<span className="text-pink-500">®</span>
           </motion.a>
 
           {/* Navigation Links - Center/Right Side */}

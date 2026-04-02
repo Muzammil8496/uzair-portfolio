@@ -10,19 +10,31 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'CODEGEN WEB',
+      title: 'MyCrmSim',
       description: 'A modern code generation platform that helps developers create clean, efficient code. Features include AI-powered suggestions, real-time preview, and multiple framework support.',
       category: 'Web Development',
       image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop'
     },
     {
-      title: 'EcoShop',
+      title: 'Sendify',
       description: 'Sustainable e-commerce platform for eco-friendly products. Includes product filtering, cart system, and eco-impact calculator.',
       category: 'E-Commerce',
       image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=400&fit=crop'
     },
     {
-      title: 'Creative Portfolio',
+      title: 'GlamBar Beauty Lounge',
+      description: 'Creative portfolio website with smooth animations and modern design. Fully responsive and optimized for performance.',
+      category: 'Design',
+      image: 'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=600&h=400&fit=crop'
+    },
+    {
+      title: 'Perth Cheap Taxi',
+      description: 'Creative portfolio website with smooth animations and modern design. Fully responsive and optimized for performance.',
+      category: 'Design',
+      image: 'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=600&h=400&fit=crop'
+    },
+    {
+      title: 'Nutrafi Kitchen',
       description: 'Creative portfolio website with smooth animations and modern design. Fully responsive and optimized for performance.',
       category: 'Design',
       image: 'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=600&h=400&fit=crop'

@@ -12,14 +12,14 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-pink-500 text-lg mb-2">Hi, I'm Emmy Rose!</p>
+            <p className="text-pink-500 text-lg mb-2">Hi, I'm Uzair Saeed!</p>
             <h1 className="text-6xl md:text-7xl font-bold text-gray-800 mb-4">
-              WEB
+              Quality
               <br />
-              <span className="text-pink-500">DESIGNER</span>
+              <span className="text-pink-500">Assurance</span>
             </h1>
             <p className="text-gray-600 text-lg leading-relaxed mb-8 max-w-lg">
-              Emmy is a passionate and creative web designer known for crafting visually stunning and user-friendly websites. With a keen eye for design and a deep understanding of modern web development, she transforms ideas into beautifully functional digital experiences.
+             Uzair is a dedicated and detail-oriented QA professional, known for ensuring software and digital products meet the highest quality standards. With a sharp eye for detecting issues and a deep understanding of testing processes, he ensures that every product is reliable, efficient, and delivers a seamless user experience.
             </p>
             <div className="flex space-x-4">
               <a

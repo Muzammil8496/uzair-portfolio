@@ -20,13 +20,13 @@ const About = () => {
         >
           <p className="text-pink-500 text-lg mb-2">About Me</p>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Creative Designer
+            QA Specialist 
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed mb-6">
-            Emmy is a passionate and creative web designer known for crafting visually stunning and user-friendly websites. With a keen eye for design and a deep understanding of modern web development, she transforms ideas into beautifully functional digital experiences.
+            Uzair is a passionate and detail-oriented QA specialist known for ensuring bug-free and high-performance web applications. With a sharp focus on quality assurance and a deep understanding of testing methodologies, he transforms ideas into thoroughly tested digital experiences.
           </p>
           <p className="text-gray-600 text-lg leading-relaxed">
-            With over 5 years of experience in the industry, Emmy has worked with clients from around the world, delivering exceptional results that exceed expectations.
+            With over 5 years of experience in the industry, Uzair has worked with clients from around the world, delivering exceptional results that exceed expectations.
           </p>
         </motion.div>
       </div>
