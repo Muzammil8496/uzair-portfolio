@@ -18,23 +18,33 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3' : 'bg-white py-5'}`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          {/* Logo Left Side */}
-          <motion.a
-            href="#home"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-3xl font-bold text-gray-800"
-          >
-            UZAIR<span className="text-pink-500">®</span>
-          </motion.a>
+         {/* Logo Left Side */}
+<motion.a
+  href="#home"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  className="flex items-center gap-3"
+>
+  {/* Logo Image */}
+  <img
+    src="logo2.png"
+    alt="Logo"
+    className="h-14 w-14 object-contain"
+  />
+
+  {/* Text */}
+  <span className="text-2xl md:text-3xl font-bold text-gray-800">
+    UZAIR TECH
+  </span>
+</motion.a>
 
           {/* Navigation Links - Center/Right Side */}
           <div className="hidden md:flex items-center space-x-8">
             <a href="#home" className="text-gray-600 hover:text-pink-500 transition-colors">Home</a>
             <a href="#about" className="text-gray-600 hover:text-pink-500 transition-colors">About</a>
-            <a href="#projects" className="text-gray-600 hover:text-pink-500 transition-colors">Portfolio</a>
+            {/* <a href="#projects" className="text-gray-600 hover:text-pink-500 transition-colors">Portfolio</a>
             <a href="#blog" className="text-gray-600 hover:text-pink-500 transition-colors">Blog</a>
-            <a href="#contact" className="text-gray-600 hover:text-pink-500 transition-colors">Contact</a>
+            <a href="#contact" className="text-gray-600 hover:text-pink-500 transition-colors">Contact</a> */}
             <a href="#contact" className="px-6 py-2 border-2 border-pink-500 text-pink-500 rounded-full hover:bg-pink-500 hover:text-white transition-all">
               Let's Talk
             </a>

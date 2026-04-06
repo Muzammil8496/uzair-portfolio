@@ -20,7 +20,7 @@ const About = () => {
         >
           <p className="text-pink-500 text-lg mb-2">About Me</p>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            QA Specialist 
+            Automation Engineer 
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed mb-6">
             Uzair is a passionate and detail-oriented QA specialist known for ensuring bug-free and high-performance web applications. With a sharp focus on quality assurance and a deep understanding of testing methodologies, he transforms ideas into thoroughly tested digital experiences.

@@ -14,10 +14,9 @@ const Contact = () => {
   const [isSending, setIsSending] = useState(false);
   const [status, setStatus] = useState({ type: '', message: '' });
 
-  // ✅ APNI REAL IDs YAHAN LAGAO ✅
-  const SERVICE_ID = 'service_2es5q7l';        // Service ID
-  const TEMPLATE_ID = 'template_seq81o9';      // Template ID
-  const PUBLIC_KEY = '6k7WwjyUOp8QJ5wA8';     // Public Key
+  const SERVICE_ID = 'service_2es5q7l';
+  const TEMPLATE_ID = 'template_seq81o9';
+  const PUBLIC_KEY = '6k7WwjyUOp8QJ5wA8';
 
   const [formData, setFormData] = useState({
     name: '',
@@ -48,10 +47,9 @@ const Contact = () => {
         throw new Error('Failed to send');
       }
     } catch (error) {
-      console.error('EmailJS Error:', error);
       setStatus({
         type: 'error',
-        message: '❌ Failed to send. Please try again or email directly: uzairsaeed010@gmail.com'
+        message: '❌ Failed to send. Please try again.'
       });
     } finally {
       setIsSending(false);
@@ -59,107 +57,114 @@ const Contact = () => {
     }
   };
 
-  // WhatsApp number (without + and spaces)
-  const whatsappNumber = '923492209006'; // +92 349 220 9006 -> 923492209006
+  const whatsappNumber = '923492209006';
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
   const phoneLink = `tel:+923492209006`;
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-gradient-to-br from-white via-purple-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+        {/* Heading */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <p className="text-pink-500 text-lg mb-2">Get In Touch</p>
+          <p className="text-purple-500 text-lg mb-2 font-medium">Get In Touch</p>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
             Let's Work Together
           </h2>
-          <div className="w-20 h-1 bg-pink-500 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full"></div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Info Section */}
+
+          {/* Contact Info Card */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6 }}
+            className="backdrop-blur-xl bg-white/60 border border-white/40 shadow-xl rounded-2xl p-8"
           >
             <h3 className="text-2xl font-bold text-gray-800 mb-4">Contact Info</h3>
             <p className="text-gray-600 mb-8">
-              I'm currently available for freelance work. Feel free to reach out!
+              I'm available for freelance projects. Let’s build something amazing 
             </p>
 
-            <div className="space-y-4">
+            <div className="space-y-6">
+
               {/* Email */}
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
-                  <FaEnvelope className="text-pink-500 text-xl" />
+              <div className="flex items-center gap-4 group">
+                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center group-hover:scale-110 transition">
+                  <FaEnvelope className="text-purple-500" />
                 </div>
                 <div>
-                  <p className="text-gray-500 text-sm">Email</p>
-                  <p className="text-gray-800">uzairsaeed010@gmail.com</p>
+                  <p className="text-sm text-gray-700">Email</p>
+                  <a href="mailto:uzairsaeed010@gmail.com">
+                    <p className="text-gray-500 group-hover:text-blue-500 transition">
+                      uzairsaeed010@gmail.com
+                    </p>
+                  </a>
                 </div>
               </div>
 
-              {/* Phone - Call ke liye */}
-              <div className="flex items-center space-x-4">
-                <a 
-                  href={phoneLink}
-                  className="flex items-center space-x-4 hover:opacity-80 transition-all"
-                >
-                  <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
-                    <FaPhone className="text-pink-500 text-xl" />
-                  </div>
-                  <div>
-                    <p className="text-gray-500 text-sm">Call Me</p>
-                    <p className="text-gray-800">+92 349 220 9006</p>
-                  </div>
-                </a>
-              </div>
+              {/* Phone */}
+              <a href={phoneLink} className="flex items-center gap-4 group">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center group-hover:scale-110 transition">
+                  <FaPhone className="text-blue-500" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-700">Call Me</p>
+                  <p className="text-gray-500 group-hover:text-blue-500 transition">
+                    +92 349 220 9006
+                  </p>
+                </div>
+              </a>
 
-              {/* WhatsApp - Chat ke liye */}
-              <div className="flex items-center space-x-4">
-                <a 
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-4 hover:opacity-80 transition-all"
-                >
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                    <FaWhatsapp className="text-green-500 text-xl" />
-                  </div>
-                  <div>
-                    <p className="text-gray-500 text-sm">WhatsApp</p>
-                    <p className="text-gray-800">+92 349 220 9006</p>
-                  </div>
-                </a>
-              </div>
+              {/* WhatsApp */}
+              <a href={whatsappLink} target="_blank" className="flex items-center gap-4 group">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center group-hover:scale-110 transition">
+                  <FaWhatsapp className="text-green-500" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-700">WhatsApp</p>
+                  <p className="text-gray-500 group-hover:text-blue-500 transition">
+                    +92 349 220 9006
+                  </p>
+                </div>
+              </a>
 
               {/* Location */}
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
-                  <FaMapMarkerAlt className="text-pink-500 text-xl" />
+              <a
+                href="https://www.google.com/maps?q=Khyber+Pakhtunkhwa+Pakistan"
+                target="_blank"
+                className="flex items-center gap-4 group"
+              >
+                <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center group-hover:scale-110 transition">
+                  <FaMapMarkerAlt className="text-pink-500" />
                 </div>
                 <div>
-                  <p className="text-gray-500 text-sm">Location</p>
-                  <p className="text-gray-800">Khyber Pakhtunkhwa, Pakistan</p>
+                  <p className="text-sm text-gray-700">Location</p>
+                  <p className="text-gray-500 group-hover:text-blue-500 transition">
+                    Khyber Pakhtunkhwa, Pakistan
+                  </p>
                 </div>
-              </div>
+              </a>
+
             </div>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* Form Card */}
           <motion.form
             ref={formRef}
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6 }}
             onSubmit={handleSubmit}
-            className="space-y-4"
+            className="backdrop-blur-xl bg-white/60 border border-white/40 shadow-xl rounded-2xl p-8 space-y-4"
           >
             <input
               type="text"
@@ -167,56 +172,56 @@ const Contact = () => {
               placeholder="Your Name"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-pink-500"
+              className="w-full px-4 py-3 bg-white/70 border border-gray-300 rounded-lg focus:border-blue-500 hover:border-blue-400 outline-none transition"
               required
-              disabled={isSending}
             />
+
             <input
               type="email"
               name="email"
               placeholder="Your Email"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-pink-500"
+              className="w-full px-4 py-3 bg-white/70 border border-gray-300 rounded-lg focus:border-blue-500 hover:border-blue-400 outline-none transition"
               required
-              disabled={isSending}
             />
+
             <textarea
               name="message"
               rows="5"
               placeholder="Your Message"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-pink-500"
+              className="w-full px-4 py-3 bg-white/70 border border-gray-300 rounded-lg focus:border-blue-500 hover:border-blue-400 outline-none transition"
               required
-              disabled={isSending}
             ></textarea>
-            
+
             <button
               type="submit"
               disabled={isSending}
-              className="w-full py-3 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+              className="w-full py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg hover:opacity-90 transition flex items-center justify-center gap-2"
             >
               {isSending ? (
                 <>
                   <FaSpinner className="animate-spin" />
-                  <span>Sending...</span>
+                  Sending...
                 </>
               ) : (
-                <span>Send Message</span>
+                "Send Message"
               )}
             </button>
-            
+
             {status.message && (
-              <div className={`p-3 rounded-lg ${
-                status.type === 'success' 
-                  ? 'bg-green-100 text-green-700 border border-green-200' 
-                  : 'bg-red-100 text-red-700 border border-red-200'
+              <div className={`p-3 rounded-lg text-sm ${
+                status.type === 'success'
+                  ? 'bg-green-100 text-green-700'
+                  : 'bg-red-100 text-red-700'
               }`}>
                 {status.message}
               </div>
             )}
           </motion.form>
+
         </div>
       </div>
     </section>

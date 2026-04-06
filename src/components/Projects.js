@@ -35,7 +35,7 @@ const Projects = () => {
     },
     {
       title: 'Perth Cheap Taxi',
-      link: 'https://your-taxi-link.com',
+      link: 'https://perthcheaptaxi.com/',
       description: 'Creative portfolio website with smooth animations and modern design. Fully responsive and optimized for performance.',
       category: 'Design',
       image: 'Taxi.png',
@@ -67,7 +67,7 @@ const Projects = () => {
   const displayedProjects = showAll ? projects : projects.slice(0, 6);
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-20 bg-blue-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         
         <motion.div
