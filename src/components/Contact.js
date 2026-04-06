@@ -125,7 +125,12 @@ const Contact = () => {
               </a>
 
               {/* WhatsApp */}
-              <a href={whatsappLink} target="_blank" className="flex items-center gap-4 group">
+              <a 
+                href={whatsappLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 group"
+              >
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center group-hover:scale-110 transition">
                   <FaWhatsapp className="text-green-500" />
                 </div>
@@ -141,6 +146,7 @@ const Contact = () => {
               <a
                 href="https://www.google.com/maps?q=Khyber+Pakhtunkhwa+Pakistan"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-4 group"
               >
                 <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center group-hover:scale-110 transition">
