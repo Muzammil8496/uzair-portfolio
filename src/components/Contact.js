@@ -91,7 +91,7 @@ const Contact = () => {
           >
             <h3 className="text-2xl font-bold text-gray-800 mb-4">Contact Info</h3>
             <p className="text-gray-600 mb-8">
-              I'm available for freelance projects. Let’s build something amazing 
+              I'm available for freelance projects, Let’s build something amazing.
             </p>
 
             <div className="space-y-6">
